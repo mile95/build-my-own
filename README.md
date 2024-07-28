@@ -10,3 +10,10 @@ Sometimes I found it fun to reimplement the wheel.
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+
+## Deployment
+
+1. swith to `gh-pages` branch and merge latest main.
+2. run `ng build --configuration production --base-href https://fredrikmile.com/build-my-own/`
+3. `git push`
