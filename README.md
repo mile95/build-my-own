@@ -1,7 +1,7 @@
 # Build My Own
 
 Angular application for collecting my __Build My Own__ stuff.
-Sometimes I found it fun to reimplement the wheel.
+Sometimes I find it fun to reimplement the wheel.
 
 ## Content
 
