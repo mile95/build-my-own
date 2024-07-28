@@ -7,7 +7,7 @@ enum GameState {
   'NOT_STARTED'
 }
 
-export enum TileState {
+enum TileState {
   'CLOSED',
   'OPENED',
   'FLAGGED'
@@ -55,8 +55,7 @@ export class MinesweeperComponent implements OnInit, OnDestroy {
   state: GameState = GameState.NOT_STARTED
 
   constructor() {
-    let bombIndices = this.generateBombIndices(this.BOMB_COUNT);
-    this.tiles = Array.from({ length: this.HEIGHT * this.WIDTH }, (x, i) => new Tile(bombIndices.includes(i)));
+    this.initTiles()
   }
 
   ngOnInit() {
@@ -65,6 +64,11 @@ export class MinesweeperComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.stopTimer()
+  }
+
+  initTiles() {
+    let bombIndices = this.generateBombIndices(this.BOMB_COUNT);
+    this.tiles = Array.from({ length: this.HEIGHT * this.WIDTH }, (x, i) => new Tile(bombIndices.includes(i)));
   }
 
   initTimer() {
@@ -125,7 +129,9 @@ export class MinesweeperComponent implements OnInit, OnDestroy {
   }
 
   restart() {
-    window.location.reload();
+    this.state = GameState.NOT_STARTED
+    this.initTiles()
+    this.timer = 0
   }
 
   getNumberColor(tileIndex: number) {
