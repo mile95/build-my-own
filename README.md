@@ -5,7 +5,7 @@ Sometimes I found it fun to reimplement the wheel.
 
 ## Content
 
-1. Minesweeper
+1. [Minesweeper](https://github.com/mile95/build-my-own/tree/main/src/app/)
 
 ## Development server
 
