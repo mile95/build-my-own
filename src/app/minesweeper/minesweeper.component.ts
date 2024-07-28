@@ -211,6 +211,12 @@ export class MinesweeperComponent implements OnInit, OnDestroy {
 
   onRightClickTile(event: MouseEvent, tile: Tile) {
     event.preventDefault()
+
+    if (!this.gameRunning()) {
+      console.log("game running..")
+      return;
+    }
+
     if (tile.state === TileState.FLAGGED) {
       tile.state = TileState.CLOSED
     } else {
