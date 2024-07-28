@@ -14,6 +14,5 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Deployment
 
-1. swith to `gh-pages` branch and merge latest main.
 2. run `ng build --configuration production --base-href https://fredrikmile.com/build-my-own/`
 3. `git push`
