@@ -1,0 +1,114 @@
+.titleSection {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+.outer-border {
+    border-left: 0.5rem solid #6c757d;
+    border-top: 0.5rem solid #6c757d;
+    border-right: 0.5rem solid #242b34;
+    border-bottom: 0.5rem solid #242b34;
+}
+
+.inner-border {
+    border: 1rem solid #464e56;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    border-right: 0.5rem solid #6c757d;
+    border-bottom: 0.5rem solid #6c757d;
+    border-left: 0.5rem solid #242b34;
+    border-top: 0.5rem solid #242b34;
+    background-color: #4c545c;
+    ;
+    font-size: 3rem;
+    padding: 0.5rem;
+}
+
+.counter {
+    color: red;
+    background-color: black;
+    font-family: "Chakra Petch", sans-serif;
+    border-right: 0.2rem solid #6c757d;
+    border-bottom: 0.2rem solid #6c757d;
+    border-left: 0.2rem solid #242b34;
+    border-top: 0.2rem solid #242b34;
+    width: 7rem;
+    text-align: center;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    border-right: 0.5rem solid #6c757d;
+    border-bottom: 0.5rem solid #6c757d;
+    border-left: 0.5rem solid #242b34;
+    border-top: 0.5rem solid #242b34;
+}
+
+.tile {
+    border-left: 0.5rem solid #6c757d;
+    border-top: 0.5rem solid #6c757d;
+    border-right: 0.5rem solid #242b34;
+    border-bottom: 0.5rem solid #242b34;
+    width: 3rem;
+    height: 3rem;
+    background-color: #4c545c;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topbar .tile {
+    width: 4rem;
+    height: 4rem;
+}
+
+.openTile {
+    font-weight: bold;
+    font-size: 2.5rem;
+    background-color: #4c545c;
+    border: 0.1rem solid #242b34;
+    font-family: "Chakra Petch", sans-serif;
+    box-sizing: border-box;
+}
+
+.greenText {
+    color: #64be65;
+}
+
+.blueText {
+    color: #75b8eb;
+}
+
+.redText {
+    color: #fe7788;
+}
+
+.noText {
+    font-size: 0;
+}
+
+.closedTile {
+    cursor: pointer;
+}
+
+.redBackground {
+    background-color: #fe7788;
+}
+
+.icon {
+    width: 28px;
+}
+
+.pointer {
+    cursor: pointer;
+}

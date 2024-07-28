@@ -1,0 +1,37 @@
+<div class="titleSection">
+    <h1>Minesweeper</h1>
+    <a href="https://codingchallenges.fyi/challenges/challenge-minesweeper/">Credit</a>
+    <a href="https://github.com/mile95/build-my-own">Source</a>
+</div>
+
+<div class="outer-border">
+    <div class="inner-border">
+        <div class="topbar">
+            <span class="counter">{{this.counterAsString(this.numberOfBombsLeft())}}</span>
+            <div (click)="this.restart()" class="tile pointer">
+                <span *ngIf="gameRunning() || gameNotStarted()">😀</span>
+                <span *ngIf="gameLost()">☹️</span>
+                <span *ngIf="gameWon()">😎</span>
+            </div>
+            <span class="counter">{{this.counterAsString(this.timer)}}</span>
+        </div>
+        <div class="grid">
+            <ng-container *ngFor="let tile of this.tiles; let i = index">
+                <div *ngIf="tile.isOpen()" class="openTile tile" [ngClass]="{'redBackground': tile.activatedBomb}">
+                    <span *ngIf="!tile.isBomb" [ngClass]="this.getNumberColor(i)">
+                        {{this.numberOfneighboursWithBombs(i)}}</span>
+                    <span *ngIf="tile.isBomb">
+                        <img class="icon" src="assets/bomb.png" />
+                    </span>
+                </div>
+
+                <div *ngIf="!tile.isOpen()" class="closedTile tile" (click)="onTilePress(i)"
+                    (contextmenu)="onRightClickTile($event, tile)">
+                    <span *ngIf="tile.isFlagged()">
+                        <img class="icon" src="assets/flag.png" />
+                    </span>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
